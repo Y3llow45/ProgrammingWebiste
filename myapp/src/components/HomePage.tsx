@@ -7,40 +7,94 @@ import {
   Container,
   Card,
   CardContent,
-  CardMedia,
 } from '@mui/material';
 import './HomePage.css';
 
-const languages = [
+interface Language {
+  name: string;
+  logoUrl: string;
+  tagline: string;
+  details: string[];
+}
+
+const languages: Language[] = [
   {
     name: 'JavaScript',
-    logoBg: '#ffeb3b',
-    logoText: 'JS',
-    tagline: 'Made in 2012',
+    logoUrl:
+      'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
+    tagline: 'Created in 1995',
     details: [
-      'Widely used by 20 mil people',
-      'Mostly used for websites',
-      'Could be used for backend (Node.js)',
-      'Important for front-end/full-stack',
-      'Easy to learn: 1 mo syntax, 5 mo basic, 6 mo React',
+      'Used by 20M+ developers',
+      'Primarily for web development',
+      'Can be used for backend (Node.js)',
+      'Essential for front-end/full-stack',
+      'Learning curve: Easy to moderate',
     ],
   },
-  { name: 'Rust', logoBg: '#dea584', logoText: 'R', tagline: '2021 Stable', details: [] },
-  { name: 'Go', logoBg: '#00add8', logoText: 'Go', tagline: '2012 Stable', details: [] },
+  {
+    name: 'TypeScript',
+    logoUrl:
+      'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
+    tagline: 'Released in 2012',
+    details: [
+      'Superset of JavaScript',
+      'Adds static typing',
+      'Popular in large codebases',
+      'Better tooling & refactoring',
+      'Learning curve: Moderate',
+    ],
+  },
+  {
+    name: 'C#',
+    logoUrl:
+      'https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg',
+    tagline: 'First appeared in 2000',
+    details: [
+      'Main language for .NET',
+      'Used in game dev (Unity)',
+      'Strongly typed, OOP',
+      'Back-end APIs, desktop apps',
+      'Learning curve: Moderate',
+    ],
+  },
+  {
+    name: 'Python',
+    logoUrl:
+      'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
+    tagline: 'Created in 1991',
+    details: [
+      'Popular in data science & AI',
+      'Easy to read and write',
+      'Versatile: web, scripting, automation',
+      'Huge ecosystem of libraries',
+      'Learning curve: Easy',
+    ],
+  },
+  {
+    name: 'Rust',
+    logoUrl:
+      'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg',
+    tagline: 'Created in 2010',
+    details: [
+      'Focus on safety & performance',
+      'Used in systems programming',
+      'Growing community',
+      'Steeper learning curve',
+      'Learning curve: Moderate to hard',
+    ],
+  },
 ];
 
 const HomePage: React.FC = () => (
   <>
-    <AppBar position="static" className="appBar">
+    <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" className="logo">
-          Logo
-        </Typography>
+        <Typography variant="h6">Logo</Typography>
         <div className="navLinks">
           <Button color="inherit">Home</Button>
-          <Button color="inherit">What language?</Button>
+          <Button color="inherit">What language should I choose?</Button>
           <Button color="inherit">IT Fields</Button>
-          <Button color="inherit">About</Button>
+          <Button color="inherit">About the Project</Button>
         </div>
       </Toolbar>
     </AppBar>
@@ -52,33 +106,22 @@ const HomePage: React.FC = () => (
 
       <div className="cardGrid">
         {languages.map((lang, idx) => (
-          <div className="cardItem" key={idx}>
-            <Card className="langCard">
-              {lang.name && (
-                <>
-                  <CardMedia
-                    className="logoBox"
-                    style={{ backgroundColor: lang.logoBg }}
-                  >
-                    <Typography variant="h3" className="logoText">
-                      {lang.logoText}
-                    </Typography>
-                  </CardMedia>
-                  <CardContent>
-                    <Typography variant="h6">{lang.name}</Typography>
-                    <Typography variant="subtitle2" color="textSecondary">
-                      {lang.tagline}
-                    </Typography>
-                    {lang.details.map((line, i) => (
-                      <Typography key={i} variant="body2">
-                        {line}
-                      </Typography>
-                    ))}
-                  </CardContent>
-                </>
-              )}
-            </Card>
-          </div>
+          <Card className="langCard" key={idx}>
+            <div className="logoBox">
+              <img src={lang.logoUrl} alt={`${lang.name} logo`} className="logoImg" />
+            </div>
+            <CardContent>
+              <Typography variant="h6">{lang.name}</Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                {lang.tagline}
+              </Typography>
+              {lang.details.map((line, i) => (
+                <Typography key={i} variant="body2">
+                  {line}
+                </Typography>
+              ))}
+            </CardContent>
+          </Card>
         ))}
       </div>
     </Container>

@@ -1,53 +1,53 @@
-/* HomePage.css */
-.appBar {
-  background: white;
-  color: black;
-  box-shadow: none;
-  border-bottom: 1px solid #ccc;
-}
-
-.logo {
-  flex-grow: 1;
-}
-
-.navLinks button {
-  text-transform: none;
-  font-size: 0.9rem;
-  margin-left: 1rem;
-}
-
 .mainContainer {
-  text-align: center;
-  margin-top: 2rem;
+  padding: 2rem;
 }
 
 .headline {
+  text-align: center;
   margin-bottom: 2rem;
-  font-weight: bold;
 }
 
 .highlight {
-  color: red;
+  color: #1976d2;
+}
+
+.navLinks {
+  margin-left: auto;
 }
 
 .cardGrid {
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-top: 4rem;
 }
 
 .langCard {
-  border: 1px solid red;
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.langCard:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .logoBox {
-  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 120px;
+  background: #f5f5f5;
 }
 
-.logoText {
-  font-weight: bold;
+.logoImg {
+  max-height: 80px;
+  max-width: 80px;
+  object-fit: contain;
 }
 
 .langCard .MuiCardContent-root {
