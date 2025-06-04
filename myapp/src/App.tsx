@@ -1,15 +1,17 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/HomePage';
+import HomePage from './components/HomePage';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-        <Routes>
-            <Route path="/" element={<Home />} />
-        </Routes>
-    </div>
-  );
+    const [language, setLanguage] = useState<'eng' | 'deu' | 'spa'>('eng');
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/" element={<HomePage language={language} />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

@@ -1,13 +1,4 @@
-import React from 'react';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  Container,
-  Card,
-  CardContent,
-} from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Container, Card, CardContent } from '@mui/material';
 import './HomePage.css';
 
 interface Language {
@@ -15,6 +6,10 @@ interface Language {
   logoUrl: string;
   tagline: string;
   details: string[];
+}
+
+interface Props {
+  language: 'eng' | 'deu' | 'spa';
 }
 
 const languages: Language[] = [
@@ -85,13 +80,13 @@ const languages: Language[] = [
   },
 ];
 
-const HomePage: React.FC = () => (
+const HomePage: React.FC<Props> = ({language}) => (
   <>
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6">Logo</Typography>
         <div className="navLinks">
-          <Button color="inherit">Home</Button>
+          <Button color="inherit">{language}</Button>
           <Button color="inherit">What language should I choose?</Button>
           <Button color="inherit">IT Fields</Button>
           <Button color="inherit">About the Project</Button>
