@@ -1,0 +1,55 @@
+/* HomePage.css */
+.appBar {
+  background: white;
+  color: black;
+  box-shadow: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.navLinks button {
+  text-transform: none;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.mainContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.headline {
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: red;
+}
+
+.cardGrid {
+  justify-content: center;
+}
+
+.langCard {
+  border: 1px solid red;
+  min-height: 300px;
+}
+
+.logoBox {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-weight: bold;
+}
+
+.langCard .MuiCardContent-root {
+  text-align: left;
+}
