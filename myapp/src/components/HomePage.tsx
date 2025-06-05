@@ -19,7 +19,8 @@ interface Language {
   learningCurve: 'Easy' | 'Moderate' | 'Hard';
   salaryUS: string;
   salaryEU: string;
-  difficultyRating: number; // 1–5 stars
+  difficultyRating: number;
+  jobs?: string; // fill in manually
 }
 
 interface Props {
@@ -37,9 +38,10 @@ const languages: Language[] = [
       'Primarily for building interactive web pages and UI.',
     ],
     learningCurve: 'Easy',
-    salaryUS: '$120,000 / year',
-    salaryEU: '€55,000 / year',
+    salaryUS: '$116,000 / year',
+    salaryEU: '€60,000 / year',
     difficultyRating: 2,
+    jobs: '>420k',
   },
   {
     name: 'TypeScript',
@@ -51,9 +53,10 @@ const languages: Language[] = [
       'Popular in large-scale codebases and enterprise apps.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: '$120,000 / year',
-    salaryEU: '€55,000 / year',
+    salaryUS: '$116,000 / year',
+    salaryEU: '€63,900 / year',
     difficultyRating: 3,
+    jobs: '>190k',
   },
   {
     name: 'C#',
@@ -65,9 +68,10 @@ const languages: Language[] = [
       'Widely used in game development via Unity.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: '$120,000 / year',
-    salaryEU: '€55,000 / year',
+    salaryUS: '$117,000 / year',
+    salaryEU: '€58,800 / year',
     difficultyRating: 3,
+    jobs: '',
   },
   {
     name: 'Python',
@@ -79,9 +83,10 @@ const languages: Language[] = [
       'Readable syntax makes it beginner-friendly.',
     ],
     learningCurve: 'Easy',
-    salaryUS: '$120,000 / year',
-    salaryEU: '€55,000 / year',
+    salaryUS: '$124,000 / year',
+    salaryEU: '€61,600 / year',
     difficultyRating: 2,
+    jobs: '',
   },
   {
     name: 'Rust',
@@ -93,51 +98,25 @@ const languages: Language[] = [
       'Used for systems programming and performance-critical code.',
     ],
     learningCurve: 'Hard',
-    salaryUS: '$120,000 / year',
-    salaryEU: '€55,000 / year',
-    difficultyRating: 4,
+    salaryUS: '$140,000 / year',
+    salaryEU: '€65,900 / year',
+    difficultyRating: 0, // no stars
+    jobs: '',
   },
   {
-    name: 'C',
+    name: 'C++',
     logoUrl:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg',
+      'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
     released: 'Released in 1972',
     description: [
       'Low-level language that influenced many modern languages.',
       'Still widespread in embedded and systems programming.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
-    difficultyRating: 3,
-  },
-  {
-    name: 'Bash',
-    logoUrl:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg',
-    released: 'Released in 1989',
-    description: [
-      'Shell scripting language for automating command-line tasks.',
-      'Commonly used in DevOps and system administration.',
-    ],
-    learningCurve: 'Easy',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
-    difficultyRating: 2,
-  },
-  {
-    name: 'CSS3',
-    logoUrl:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg',
-    released: 'Released in 1999',
-    description: [
-      'Stylesheet language controlling layout and visuals on the web.',
-      'Essential for front-end web development alongside HTML.',
-    ],
-    learningCurve: 'Easy',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
-    difficultyRating: 1,
+    salaryUS: '$132,000 / year',
+    salaryEU: '€61,200 / year',
+    difficultyRating: 5,
+    jobs: '',
   },
   {
     name: 'Dart',
@@ -149,9 +128,10 @@ const languages: Language[] = [
       'Offers modern syntax and strong tooling support.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$104,000 / year',
+    salaryEU: '',
     difficultyRating: 3,
+    jobs: '',
   },
   {
     name: 'Elixir',
@@ -163,9 +143,10 @@ const languages: Language[] = [
       'Ideal for highly scalable, real-time applications.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$132,000 / year',
+    salaryEU: '€66,000 / year',
     difficultyRating: 3,
+    jobs: '',
   },
   {
     name: 'Erlang',
@@ -177,9 +158,10 @@ const languages: Language[] = [
       'Used in messaging platforms and real-time servers.',
     ],
     learningCurve: 'Hard',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$104,000 / year',
+    salaryEU: '',
     difficultyRating: 4,
+    jobs: '',
   },
   {
     name: 'Fortran',
@@ -191,9 +173,10 @@ const languages: Language[] = [
       'Still used heavily in engineering simulations and physics.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$113,000 / year',
+    salaryEU: '',
     difficultyRating: 3,
+    jobs: '',
   },
   {
     name: 'Go',
@@ -205,9 +188,10 @@ const languages: Language[] = [
       'Widely used in cloud services and backend APIs.',
     ],
     learningCurve: 'Easy',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$125,000 / year',
+    salaryEU: '€67,500 / year',
     difficultyRating: 2,
+    jobs: '',
   },
   {
     name: 'Haskell',
@@ -219,9 +203,10 @@ const languages: Language[] = [
       'Popular in academic circles and advanced type systems.',
     ],
     learningCurve: 'Hard',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$121,000 / year',
+    salaryEU: '',
     difficultyRating: 4,
+    jobs: '',
   },
   {
     name: 'Java',
@@ -233,9 +218,10 @@ const languages: Language[] = [
       'Dominant in enterprise systems and Android development.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$119,000 / year',
+    salaryEU: '€62,500 / year',
     difficultyRating: 3,
+    jobs: '',
   },
   {
     name: 'Kotlin',
@@ -247,9 +233,10 @@ const languages: Language[] = [
       'Officially supported for Android development by Google.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$124,000 / year',
+    salaryEU: '€63,700 / year',
     difficultyRating: 3,
+    jobs: '',
   },
   {
     name: 'Lua',
@@ -261,23 +248,10 @@ const languages: Language[] = [
       'Known for its simple syntax and small footprint.',
     ],
     learningCurve: 'Easy',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$108,000 / year',
+    salaryEU: '',
     difficultyRating: 2,
-  },
-  {
-    name: 'PowerShell',
-    logoUrl:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/powershell/powershell-original.svg',
-    released: 'Released in 2006',
-    description: [
-      'Microsoft’s shell language for Windows automation.',
-      'Now cross-platform, used in DevOps and automation scripts.',
-    ],
-    learningCurve: 'Easy',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
-    difficultyRating: 2,
+    jobs: '',
   },
   {
     name: 'PHP',
@@ -289,9 +263,10 @@ const languages: Language[] = [
       'Still runs many popular CMSs and web applications.',
     ],
     learningCurve: 'Easy',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$98,000 / year',
+    salaryEU: '€57,300 / year',
     difficultyRating: 2,
+    jobs: '',
   },
   {
     name: 'Perl',
@@ -303,23 +278,10 @@ const languages: Language[] = [
       'Once a web dev staple; now more niche in DevOps and bioinformatics.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$113,000 / year',
+    salaryEU: '',
     difficultyRating: 3,
-  },
-  {
-    name: 'Processing',
-    logoUrl:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/processing/processing-original.svg',
-    released: 'Released in 2001',
-    description: [
-      'Java-based creative coding language for visual arts.',
-      'Commonly used in education and interactive installations.',
-    ],
-    learningCurve: 'Easy',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
-    difficultyRating: 2,
+    jobs: '',
   },
   {
     name: 'R',
@@ -331,9 +293,10 @@ const languages: Language[] = [
       'Rich ecosystem of packages for analysis and visualization.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$107,000 / year',
+    salaryEU: '',
     difficultyRating: 3,
+    jobs: '',
   },
   {
     name: 'Ruby',
@@ -345,37 +308,10 @@ const languages: Language[] = [
       'Well-known for Ruby on Rails framework in web development.',
     ],
     learningCurve: 'Easy',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$131,000 / year',
+    salaryEU: '€62,200 / year',
     difficultyRating: 2,
-  },
-  {
-    name: 'Rails',
-    logoUrl:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg',
-    released: 'Released in 2005',
-    description: [
-      'Opinionated web framework built on Ruby for rapid development.',
-      'Favors “Convention over Configuration” for simplicity.',
-    ],
-    learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
-    difficultyRating: 3,
-  },
-  {
-    name: 'Scala',
-    logoUrl:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg',
-    released: 'Released in 2004',
-    description: [
-      'Hybrid language combining functional and OOP paradigms on the JVM.',
-      'Used extensively in big data frameworks like Spark.',
-    ],
-    learningCurve: 'Hard',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
-    difficultyRating: 4,
+    jobs: '',
   },
   {
     name: 'Solidity',
@@ -387,9 +323,10 @@ const languages: Language[] = [
       'Syntax resembles JavaScript/C++, tailored for blockchain development.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$178,000 / year',
+    salaryEU: '',
     difficultyRating: 3,
+    jobs: '',
   },
   {
     name: 'Swift',
@@ -401,23 +338,10 @@ const languages: Language[] = [
       'Emphasizes safety and performance with concise syntax.',
     ],
     learningCurve: 'Moderate',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
+    salaryUS: '$119,000 / year',
+    salaryEU: '',
     difficultyRating: 3,
-  },
-  {
-    name: 'Zig',
-    logoUrl:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/zig/zig-original.svg',
-    released: 'Released in 2016',
-    description: [
-      'Low-level systems programming language aiming to replace C/C++.',
-      'Gives manual control over memory with modern tooling.',
-    ],
-    learningCurve: 'Hard',
-    salaryUS: 'Data not available',
-    salaryEU: 'Data not available',
-    difficultyRating: 5,
+    jobs: '',
   },
 ];
 
@@ -452,42 +376,49 @@ const HomePage: React.FC<Props> = ({ language }) => (
             </div>
 
             <CardContent>
-              <Typography variant="h6">{lang.name}</Typography>
-              <Typography variant="subtitle2" color="textSecondary">
+              <Typography variant="h6" className="desc-text">{lang.name}</Typography>
+              <Typography variant="subtitle2" color="textSecondary" className="desc-text">
                 {lang.released}
               </Typography>
 
-              <Typography variant="body2" className="descLine">
+              <Typography variant="body2" className="descLine desc-text">
                 {lang.description[0]}
               </Typography>
-              <Typography variant="body2" className="descLine">
+              <Typography variant="body2" className="descLine desc-text">
                 {lang.description[1]}
               </Typography>
 
-              <Typography variant="body2">
+              <Typography variant="body2" className="desc-text">
                 <strong>Learning Curve:</strong> {lang.learningCurve}
               </Typography>
 
-              <Typography variant="body2">
+              <Typography variant="body2" className="desc-text">
                 <strong>Avg Salary (US):</strong> {lang.salaryUS}
               </Typography>
-              <Typography variant="body2">
+              <Typography variant="body2" className="desc-text">
                 <strong>Avg Salary (EU):</strong> {lang.salaryEU}
+              </Typography>
+              <Typography variant="body2" className="desc-text">
+                <strong>Jobs:</strong> {lang.jobs}
               </Typography>
 
               <div className="starRating">
-                <Typography variant="body2">
-                    <strong>Difficulty:</strong>
+                <Typography variant="body2" className="desc-text">
+                  <strong>Difficulty:</strong>
                 </Typography>
-                {Array.from({ length: 5 }, (_, i) =>
-                  i < lang.difficultyRating ? (
-                    <Star key={i} className="starFilled" />
-                  ) : (
-                    <StarBorder key={i} className="starEmpty" />
+                {lang.name === 'Rust' ? (
+                  <span role="img" aria-label="skull">💀💀💀💀💀</span>
+                ) : (
+                  Array.from({ length: 5 }, (_, i) =>
+                    i < lang.difficultyRating ? (
+                      <Star key={i} className="starFilled" />
+                    ) : (
+                      <StarBorder key={i} className="starEmpty" />
+                    )
                   )
                 )}
               </div>
-              
+
               <Button
                 variant="contained"
                 color="primary"
