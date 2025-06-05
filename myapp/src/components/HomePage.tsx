@@ -20,7 +20,7 @@ interface Language {
   salaryUS: string;
   salaryEU: string;
   difficultyRating: number;
-  jobs?: string; // fill in manually
+  jobs?: string;
 }
 
 interface Props {
@@ -71,7 +71,7 @@ const languages: Language[] = [
     salaryUS: '$117,000 / year',
     salaryEU: '€58,800 / year',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>245k',
   },
   {
     name: 'Python',
@@ -86,7 +86,7 @@ const languages: Language[] = [
     salaryUS: '$124,000 / year',
     salaryEU: '€61,600 / year',
     difficultyRating: 2,
-    jobs: '',
+    jobs: '>400k',
   },
   {
     name: 'Rust',
@@ -100,8 +100,8 @@ const languages: Language[] = [
     learningCurve: 'Hard',
     salaryUS: '$140,000 / year',
     salaryEU: '€65,900 / year',
-    difficultyRating: 0, // no stars
-    jobs: '',
+    difficultyRating: 0,
+    jobs: '>8k',
   },
   {
     name: 'C++',
@@ -116,7 +116,7 @@ const languages: Language[] = [
     salaryUS: '$132,000 / year',
     salaryEU: '€61,200 / year',
     difficultyRating: 5,
-    jobs: '',
+    jobs: '>170k',
   },
   {
     name: 'Dart',
@@ -131,7 +131,7 @@ const languages: Language[] = [
     salaryUS: '$104,000 / year',
     salaryEU: '',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>12k',
   },
   {
     name: 'Elixir',
@@ -146,7 +146,7 @@ const languages: Language[] = [
     salaryUS: '$132,000 / year',
     salaryEU: '€66,000 / year',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>100',
   },
   {
     name: 'Erlang',
@@ -161,7 +161,7 @@ const languages: Language[] = [
     salaryUS: '$104,000 / year',
     salaryEU: '',
     difficultyRating: 4,
-    jobs: '',
+    jobs: '>350',
   },
   {
     name: 'Fortran',
@@ -176,7 +176,7 @@ const languages: Language[] = [
     salaryUS: '$113,000 / year',
     salaryEU: '',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>50',
   },
   {
     name: 'Go',
@@ -191,7 +191,7 @@ const languages: Language[] = [
     salaryUS: '$125,000 / year',
     salaryEU: '€67,500 / year',
     difficultyRating: 2,
-    jobs: '',
+    jobs: '>49k',
   },
   {
     name: 'Haskell',
@@ -206,7 +206,7 @@ const languages: Language[] = [
     salaryUS: '$121,000 / year',
     salaryEU: '',
     difficultyRating: 4,
-    jobs: '',
+    jobs: '>150',
   },
   {
     name: 'Java',
@@ -220,8 +220,8 @@ const languages: Language[] = [
     learningCurve: 'Moderate',
     salaryUS: '$119,000 / year',
     salaryEU: '€62,500 / year',
-    difficultyRating: 3,
-    jobs: '',
+    difficultyRating: 4,
+    jobs: '>370k',
   },
   {
     name: 'Kotlin',
@@ -236,7 +236,7 @@ const languages: Language[] = [
     salaryUS: '$124,000 / year',
     salaryEU: '€63,700 / year',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>11k',
   },
   {
     name: 'Lua',
@@ -251,7 +251,7 @@ const languages: Language[] = [
     salaryUS: '$108,000 / year',
     salaryEU: '',
     difficultyRating: 2,
-    jobs: '',
+    jobs: '>3,8k',
   },
   {
     name: 'PHP',
@@ -266,7 +266,7 @@ const languages: Language[] = [
     salaryUS: '$98,000 / year',
     salaryEU: '€57,300 / year',
     difficultyRating: 2,
-    jobs: '',
+    jobs: '>205k',
   },
   {
     name: 'Perl',
@@ -281,7 +281,7 @@ const languages: Language[] = [
     salaryUS: '$113,000 / year',
     salaryEU: '',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>1,5k',
   },
   {
     name: 'R',
@@ -296,7 +296,7 @@ const languages: Language[] = [
     salaryUS: '$107,000 / year',
     salaryEU: '',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>2,5k',
   },
   {
     name: 'Ruby',
@@ -311,7 +311,7 @@ const languages: Language[] = [
     salaryUS: '$131,000 / year',
     salaryEU: '€62,200 / year',
     difficultyRating: 2,
-    jobs: '',
+    jobs: '>74k',
   },
   {
     name: 'Solidity',
@@ -326,7 +326,7 @@ const languages: Language[] = [
     salaryUS: '$178,000 / year',
     salaryEU: '',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>2,5k',
   },
   {
     name: 'Swift',
@@ -341,8 +341,50 @@ const languages: Language[] = [
     salaryUS: '$119,000 / year',
     salaryEU: '',
     difficultyRating: 3,
-    jobs: '',
+    jobs: '>3,5k',
   },
+  {
+    name: 'SQL',
+    logoUrl: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
+    released: 'Released in 1974',
+    description: [
+      'Standard language for managing relational databases.',
+      'Widely used in backend, analytics, and data engineering.',
+    ],
+    learningCurve: 'Easy',
+    salaryUS: '$95,000 / year',
+    salaryEU: '€10,000 / year',
+    difficultyRating: 2,
+    jobs: '>45k',
+    },
+    {
+    name: 'ABAP',
+    logoUrl: 'https://community.sap.com/legacyfs/online/storage/blog_attachments/2022/09/abap-code-challengeArtboard_1-1.png',
+    released: 'Released in 1983',
+    description: [
+      'Proprietary language by SAP for business application development.',
+      'Used in enterprise environments with SAP systems.',
+    ],
+    learningCurve: 'Moderate',
+    salaryUS: '$120,000 / year',
+    salaryEU: '€61,500 / year',
+    difficultyRating: 2,
+    jobs: '>3k',
+    },
+    {
+    name: 'COBOL',
+    logoUrl: 'https://static-00.iconduck.com/assets.00/programming-language-cobol-icon-2048x1761-bxw1kew6.png',
+    released: 'Released in 1959',
+    description: [
+      'Old but still critical for banking and government systems.',
+      'Known for verbose, English-like syntax.',
+    ],
+    learningCurve: 'Moderate',
+    salaryUS: '$110,000 / year',
+    salaryEU: '€10,000 / year',
+    difficultyRating: 2,
+    jobs: '>3k',
+    },
 ];
 
 const HomePage: React.FC<Props> = ({ language }) => (
