@@ -90,3 +90,8 @@
 .desc-text {
     padding: 0.1rem 0 0.1rem 0;
 }
+
+.skulls {
+    display: inline-block;
+    height: 1.7rem;
+}
