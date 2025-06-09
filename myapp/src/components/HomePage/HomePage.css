@@ -95,3 +95,9 @@
     display: inline-block;
     height: 1.7rem;
 }
+
+/*@media (min-width: 1200px) {
+  .css-5c1adp-MuiContainer-root {
+    max-width: 1250px !important;
+  }
+}*/
