@@ -13,9 +13,9 @@ import {
 import { InfoOutlined, Star, StarBorder } from '@mui/icons-material';
 import './HomePage.css';
 
-import engLanguage from './eng.json';
-import deuLanguage from './de.json';
-import spaLanguage from './spa.json';
+import engLanguageJson from './eng.json';
+import deuLanguageJson from './de.json';
+import spaLanguageJson from './spa.json';
 
 interface Language {
   name: string;
@@ -34,10 +34,14 @@ interface Props {
   language: 'eng' | 'deu' | 'spa';
 }
 
+const enLanguages = engLanguageJson as unknown as Language[];
+const deLanguages = deuLanguageJson as unknown as Language[];
+const esLanguages = engLanguageJson as unknown as Language[];
+
 const lndata: Record<Props['language'], Language[]> = {
-    eng: engLanguage,
-    deu: deuLanguage,
-    spa: spaLanguage
+    eng: enLanguages,
+    deu: deLanguages,
+    spa: esLanguages
 };
 
 const HomePage: React.FC<Props> = ({ language }) => {
@@ -89,7 +93,17 @@ const HomePage: React.FC<Props> = ({ language }) => {
                 
                         <Typography variant="body2" className="desc-text fieldWithInfo">
                             <strong>Learning Curve:</strong> {lang.learningCurve}
-                            <Tooltip title={tooltipText}>
+                            <Tooltip title="OPAAA"
+                                arrow
+                                componentsProps={{
+                                  tooltip: {
+                                    sx: {
+                                      fontSize: '0.8rem',
+                                      maxWidth: '300px',
+                                      p: 1
+                                    }
+                                  }
+                            }}>
                                 <IconButton size="small" className="infoIcon">
                                     <InfoOutlined fontSize="small" />
                                 </IconButton>

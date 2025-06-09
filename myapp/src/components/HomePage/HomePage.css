@@ -28,7 +28,7 @@
   flex-direction: column;
   min-height: 420px;
   border: 1px solid #e0e0e0;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 2.9s ease, box-shadow 2.9s ease;
 }
 
 .langCard:hover {
@@ -96,8 +96,8 @@
     height: 1.7rem;
 }
 
-/*@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .css-5c1adp-MuiContainer-root {
     max-width: 1250px !important;
   }
-}*/
+}
