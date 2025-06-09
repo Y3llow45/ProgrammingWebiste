@@ -263,7 +263,7 @@ const languages: Language[] = [
         ],
         learningCurve: 'Easy',
         salaryUS: '$108,000 / year',
-        salaryEU: '€55,000 / year',
+        salaryEU: '€42,200 / year',
         highEndSalary: '$228,700 / year',
         difficultyRating: 2,
         jobs: '>3,8k',
@@ -347,6 +347,22 @@ const languages: Language[] = [
         jobs: '>3k',
     },
     {
+        name: 'Matlab',
+        logoUrl:
+          'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/matlab/matlab-original.svg',
+        released: 'Released in 1984',
+        description: [
+           'High-level language for numerical computing and simulations.',
+           'Excels in matrix operations, data analysis, and prototyping.',
+        ],
+        learningCurve: 'Moderate',
+        salaryUS: '$111,000 / year',
+        salaryEU: '€60,000 / year',
+        highEndSalary: '$242,000 / year',
+        difficultyRating: 3,
+        jobs: '>2,5k',
+    },
+    {
         name: 'Perl',
         logoUrl:
           'https://raw.githubusercontent.com/devicons/devicon/master/icons/perl/perl-original.svg',
@@ -363,6 +379,22 @@ const languages: Language[] = [
         jobs: '>1,5k',
     },
     {
+        name: 'Assembly',
+        logoUrl:
+          'https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg',
+        released: 'Released in 1949',
+        description: [
+          'Low-level language mapping directly to CPU instructions.',
+          'Used for embedded systems, drivers, and more',
+        ],
+        learningCurve: 'Moderate',
+        salaryUS: '$113,000 / year',
+        salaryEU: '€65,000 / year',
+        highEndSalary: '$210,000 / year',
+        difficultyRating: 3,
+        jobs: '>800',
+    },
+    {
         name: 'Erlang',
         logoUrl:
           'https://raw.githubusercontent.com/devicons/devicon/master/icons/erlang/erlang-original.svg',
@@ -377,22 +409,6 @@ const languages: Language[] = [
         highEndSalary: '$300,000 / year',
         difficultyRating: 4,
         jobs: '>350',
-    },
-    {
-        name: 'Elixir',
-        logoUrl:
-          'https://raw.githubusercontent.com/devicons/devicon/master/icons/elixir/elixir-original.svg',
-        released: 'Released in 2011',
-        description: [
-          'Functional language built on the Erlang VM for concurrency.',
-          'Ideal for highly scalable, real-time applications.',
-        ],
-        learningCurve: 'Moderate',
-        salaryUS: '$132,000 / year',
-        salaryEU: '€73,000 / year',
-        highEndSalary: '$300,000 / year',
-        difficultyRating: 3,
-        jobs: '>100',
     },
     {
         name: 'Clojure',
@@ -425,6 +441,22 @@ const languages: Language[] = [
         highEndSalary: '$223,000 / year',
         difficultyRating: 4,
         jobs: '>150',
+    },
+    {
+        name: 'Elixir',
+        logoUrl:
+          'https://raw.githubusercontent.com/devicons/devicon/master/icons/elixir/elixir-original.svg',
+        released: 'Released in 2011',
+        description: [
+          'Functional language built on the Erlang VM for concurrency.',
+          'Ideal for highly scalable, real-time applications.',
+        ],
+        learningCurve: 'Moderate',
+        salaryUS: '$132,000 / year',
+        salaryEU: '€73,000 / year',
+        highEndSalary: '$300,000 / year',
+        difficultyRating: 3,
+        jobs: '>100',
     },
     {
         name: 'Fortran',
