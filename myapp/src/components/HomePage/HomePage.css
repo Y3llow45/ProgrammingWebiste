@@ -25,7 +25,7 @@
 
 .logoImg {
     transform: scale(0.9);
-    transition: transform 0.2s ease !important;
+    transition: transform 0.3s cubic-bezier(0.1, 0, 1, 1) !important;
 }
 
 .langCard:hover .logoImg {
