@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Button, Container, Card, CardContent, Tooltip, IconButton } from '@mui/material';
 import { InfoOutlined, Star, StarBorder } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 
 import engLanguageJson from './eng.json';
@@ -37,6 +38,7 @@ const lndata: Record<Props['language'], Language[]> = {
 };
 
 const HomePage: React.FC<Props> = ({ language }) => {
+    const navigate = useNavigate();
     const languages = lndata[language];
     const tooltipTextLearning = 'Depends what you will use it for.';
     const tooltipTextSalaryUS = 'Data for 2025 from devjobsscanner.com';
@@ -50,7 +52,7 @@ const HomePage: React.FC<Props> = ({ language }) => {
                 <Typography variant="h4" className="headline">
                     Just learning one language won't land you a job or help you build something big. 
                     You need to learn a combination of languages, frameworks, tools, databases and more.
-                    More about that here: <span className='highlight'><NavLink to={'/profiles'}>job profiles</NavLink></span>
+                    More about that here: <NavLink className='highlight' to={'/profiles'}>job profiles</NavLink>
                 </Typography>
 
             <div className="cardGrid">
@@ -133,9 +135,7 @@ const HomePage: React.FC<Props> = ({ language }) => {
                                 color="primary"
                                 size="small"
                                 className="readMoreBtn"
-                                onClick={() =>
-                                    (window.location.href = `/languages/${lang.name.toLowerCase()}`)
-                                }
+                                onClick={() => navigate(`/languages/${lang.name.toLowerCase()}`)}
                             > Read More
                             </Button>
                         </CardContent>

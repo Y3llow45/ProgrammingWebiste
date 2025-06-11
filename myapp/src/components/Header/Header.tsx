@@ -14,17 +14,16 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
   return (
         <AppBar position="static">
             <Toolbar>
-                <Typography variant="h6">Logo</Typography>
+                <Typography variant="h6"><img className='imglogo' src='./logo.png'></img></Typography>
                 <div className="navLinks">
-                    <Button color="inherit">{language}</Button>
-                    <Button color="inherit">What language should I choose?</Button>
-                    <Button color="inherit">IT Fields</Button>
-                    <Button color="inherit">About the Project</Button>
+                    <Button className='btnnav' color="inherit">What should I learn?</Button>
+                    <Button className='btnnav' color="inherit">Job profiles</Button>
+                    <Button className='btnnav' color="inherit">About</Button>
                 </div>
                 <div className="language-buttons">
-                    <button onClick={() => changeLanguage('eng')}>ENG</button>
-                    <button onClick={() => changeLanguage('deu')}>DEU</button>
-                    <button onClick={() => changeLanguage('spa')}>SPA</button>
+                    <button className='btnlang' onClick={() => changeLanguage('eng')}><img className='imglang' src='./uk.png'></img></button>
+                    <button className='btnlang' onClick={() => changeLanguage('deu')}><img className='imglang' src='./german.png'></img></button>
+                    <button className='btnlang' onClick={() => changeLanguage('spa')}><img className='imglang' src='./spain.png'></img></button>
                 </div>
             </Toolbar>
         </AppBar>
