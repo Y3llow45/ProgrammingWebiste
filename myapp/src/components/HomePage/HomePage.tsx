@@ -1,6 +1,7 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Container, Card, CardContent, Tooltip, IconButton } from '@mui/material';
+import { Typography, Button, Container, Card, CardContent, Tooltip, IconButton } from '@mui/material';
 import { InfoOutlined, Star, StarBorder } from '@mui/icons-material';
+import { NavLink } from 'react-router-dom';
 import './HomePage.css';
 
 import engLanguageJson from './eng.json';
@@ -45,21 +46,11 @@ const HomePage: React.FC<Props> = ({ language }) => {
 
     return (
         <>
-            <AppBar position="static">
-                <Toolbar>
-                    <Typography variant="h6">Logo</Typography>
-                    <div className="navLinks">
-                        <Button color="inherit">{language}</Button>
-                        <Button color="inherit">What language should I choose?</Button>
-                        <Button color="inherit">IT Fields</Button>
-                        <Button color="inherit">About the Project</Button>
-                    </div>
-                </Toolbar>
-            </AppBar>
-
             <Container className="mainContainer">
                 <Typography variant="h4" className="headline">
-                    Explore languages <span className="highlight">or</span> <u>check IT fields</u>
+                    Just learning one language won't land you a job or help you build something big. 
+                    You need to learn a combination of languages, frameworks, tools, databases and more.
+                    More about that here: <span className='highlight'><NavLink to={'/profiles'}>job profiles</NavLink></span>
                 </Typography>
 
             <div className="cardGrid">
