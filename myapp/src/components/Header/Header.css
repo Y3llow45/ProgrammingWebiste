@@ -25,3 +25,9 @@
 .btnnav:hover {
     background-color: #125699 !important;
 }
+
+.imglogo {
+    width: 50px;
+    padding-top: 9px;
+    padding-left: 10px;
+}
