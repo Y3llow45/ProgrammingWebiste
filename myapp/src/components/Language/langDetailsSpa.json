@@ -1,0 +1,18 @@
+{
+    "javascript": {
+        "shortDescription": "High-level, interpreted language mainly for web development.",
+        "longDescription": [
+            "JavaScript is the lingua franca of the web, powering interactive pages in browsers.",
+            "It supports event-driven, functional, and imperative styles, and has vast ecosystems (Node.js, frameworks)."
+        ],
+        "youtubeUrl": "https://www.youtube.com/embed/your-video-id"
+    },
+    "python": {
+        "shortDescription": "Versatile language popular in data science and scripting.",
+        "longDescription": [
+            "Python emphasizes readability with clear syntax and dynamic typing.",
+            "It’s widely used in web backends, automation, AI/ML, and more."
+        ],
+        "youtubeUrl": "https://www.youtube.com/embed/your-python-video"
+    }
+}
