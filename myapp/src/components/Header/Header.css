@@ -20,6 +20,7 @@
 
 .btnnav {
     margin-right: 50px !important;
+    border-radius: 8px;
 }
 
 .btnnav:hover {

@@ -9,7 +9,7 @@ import engLanguageJson from './eng.json';
 import deuLanguageJson from './de.json';
 import spaLanguageJson from './spa.json';
 
-interface Language {
+interface LanguageJSON {
   name: string;
   logoUrl: string;
   released: string;
@@ -26,12 +26,12 @@ interface Props {
   language: 'eng' | 'deu' | 'spa';
 }
 
-const enLanguages = engLanguageJson as unknown as Language[];
-const deLanguages = deuLanguageJson as unknown as Language[];
-const esLanguages = spaLanguageJson as unknown as Language[];
+const enLanguages = engLanguageJson as unknown as LanguageJSON[];
+const deLanguages = deuLanguageJson as unknown as LanguageJSON[];
+const esLanguages = spaLanguageJson as unknown as LanguageJSON[];
 const componentsProps = {tooltip: {sx: {fontSize: '0.8rem', maxWidth: '300px', p: 1, backgroundColor: '#636363'}}};
 
-const lndata: Record<Props['language'], Language[]> = {
+const lndata: Record<Props['language'], LanguageJSON[]> = {
     eng: enLanguages,
     deu: deLanguages,
     spa: esLanguages
