@@ -1,48 +1,101 @@
-import { Typography, Container, Box, Link } from '@mui/material';
-import { useParams } from 'react-router-dom';
+import { Typography, Container, Box, Button, List, ListItem, ListItemText } from '@mui/material';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Language.css';
 
-import langDetailsEn from './langDetailsEng.json';
+import engLanguageJson from '../HomePage/eng.json';
+import langDetailsEng from './langDetailsEng.json';
 import langDetailsDe from './langDetailsDe.json';
-import langDetailsEs from './langDetailsSpa.json';
+import langDetailsSpa from './langDetailsSpa.json';
 
 interface LanguageDetail {
   shortDescription: string;
   longDescription: string[];
   youtubeUrl: string;
+  learnWith: string[];
+}
+
+interface LocaleData {
+  [key: string]: LanguageDetail;
+}
+
+const localeData: Record<'eng' | 'deu' | 'spa', LocaleData> = {
+  eng: langDetailsEng as unknown as LocaleData,
+  deu: langDetailsDe as unknown as LocaleData,
+  spa: langDetailsSpa as unknown as LocaleData,
+};
+
+interface RouteParams {
+  langKey: string;
+  lang: string;
 }
 
 interface Props {
-  language: string;
-  locale: 'eng' | 'deu' | 'spa';
+  language: 'eng' | 'deu' | 'spa';
 }
 
-const localeData: Record<Props['locale'], Record<string, LanguageDetail>> = {
-  eng: langDetailsEn as Record<string, LanguageDetail>,
-  deu: langDetailsDe as Record<string, LanguageDetail>,
-  spa: langDetailsEs as Record<string, LanguageDetail>,
-};
+const normalizeName = (s: string) =>
+  s.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-const Language: React.FC<Props> = ({ language, locale }) => {
-  const data = localeData[locale][language.toLowerCase()];
+const Language: React.FC<Props> = ({ language }) => {
+  const { langKey } = useParams();
+  console.log(langKey);
+  const navigate = useNavigate();
+  const locale: 'eng' | 'deu' | 'spa' = 'eng';
 
+  if (!langKey) {
+    return (
+      <Container className="languageContainer">
+        <Typography variant="h5">No language specified</Typography>
+      </Container>
+    );
+  }
+  const key = normalizeName(langKey.toLowerCase()); 
+  const data = localeData[locale][key];
   if (!data) {
     return (
       <Container className="languageContainer">
         <Typography variant="h5">Language not found</Typography>
-        <Typography variant="body1">No details available for "{language}".</Typography>
+        <Typography variant="body1">No details available for "{langKey}".</Typography>
       </Container>
     );
   }
 
+  const allLangs: Array<{ name: string; logoUrl: string }> =
+    engLanguageJson as unknown as Array<{ name: string; logoUrl: string }>;
+  const logoEntry = allLangs.find(
+    (item) => normalizeName(item.name) === key
+  );
+  const logoUrl = logoEntry?.logoUrl || '';
+
   return (
     <Container className="languageContainer">
-      <Typography variant="h4" className="langTitle">
-        {language.charAt(0).toUpperCase() + language.slice(1)}
-      </Typography>
-      <Typography variant="subtitle1" className="shortDesc">
-        {data.shortDescription}
-      </Typography>
+      <Box className="headerBox">
+        {logoUrl && (
+          <Box className="logoWrapper">
+            <img src={logoUrl} alt={`${langKey} logo`} className="langPageLogo" />
+          </Box>
+        )}
+        <Box className="textWrapper">
+          <Typography variant="h4" className="langTitle">
+            {langKey.charAt(0).toUpperCase() + langKey.slice(1)}
+          </Typography>
+          <Typography variant="subtitle1" className="shortDesc">
+            {data.shortDescription}
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box className="learnWithSection">
+        <Typography variant="h6">Learn With</Typography>
+        <List dense>
+          {data.learnWith.map((item, idx) => (
+            <ListItem key={idx} disableGutters>
+              <ListItemText primary={item} />
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+
       <Box className="longDesc">
         {data.longDescription.map((para, idx) => (
           <Typography key={idx} variant="body1" paragraph>
@@ -50,18 +103,18 @@ const Language: React.FC<Props> = ({ language, locale }) => {
           </Typography>
         ))}
       </Box>
+
       {data.youtubeUrl && (
-        <Box className="videoContainer">
-          <Typography variant="h6">Watch a tutorial:</Typography>
-          <div className="iframeWrapper">
-            <iframe
-              src={data.youtubeUrl}
-              title={`${language} tutorial`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+        <Box className="buttonWrapper">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              window.open(data.youtubeUrl, '_blank');
+            }}
+          >
+            Watch on YouTube
+          </Button>
         </Box>
       )}
     </Container>

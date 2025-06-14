@@ -1,18 +1,32 @@
 {
+    "c#": {
+        "shortDescription": "Primary .NET language used for Windows apps and game development.",
+        "longDescription": [
+            "C# is a modern, object-oriented language developed by Microsoft, widely used in enterprise backends, desktop applications, and via Unity in game development.",
+            "It features strong typing, garbage collection, LINQ, async/await, and a rich ecosystem."
+        ],
+        "youtubeUrl": "https://www.youtube.com/watch?v=VIDEO_ID",
+        "learnWith": [
+            "ASP.NET Core",
+            "Entity Framework",
+            "Xamarin / MAUI",
+            ".NET CLI",
+            "Unity"
+        ]
+    },
     "javascript": {
         "shortDescription": "High-level, interpreted language mainly for web development.",
         "longDescription": [
-            "JavaScript is the lingua franca of the web, powering interactive pages in browsers.",
-            "It supports event-driven, functional, and imperative styles, and has vast ecosystems (Node.js, frameworks)."
+            "JavaScript is the lingua franca of the web, powering interactive pages in browsers and with Node.js on servers.",
+            "It supports event-driven, functional, and imperative styles, and has vast ecosystems (React, Vue, Angular, Express, etc.)."
         ],
-        "youtubeUrl": "https://www.youtube.com/embed/your-video-id"
-    },
-    "python": {
-        "shortDescription": "Versatile language popular in data science and scripting.",
-        "longDescription": [
-            "Python emphasizes readability with clear syntax and dynamic typing.",
-            "It’s widely used in web backends, automation, AI/ML, and more."
-        ],
-        "youtubeUrl": "https://www.youtube.com/embed/your-python-video"
+        "youtubeUrl": "https://www.youtube.com/watch?v=JS_VIDEO_ID",
+        "learnWith": [
+            "React",
+            "Node.js",
+            "TypeScript",
+            "Webpack / Vite",
+            "Express"
+        ]
     }
 }
