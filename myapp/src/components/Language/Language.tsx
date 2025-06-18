@@ -1,5 +1,4 @@
 import { Typography, Container, Box, Button, List, ListItem, ListItemText } from '@mui/material';
-import { useParams, useNavigate } from 'react-router-dom';
 import './Language.css';
 
 import engLanguageJson from '../HomePage/eng.json';
@@ -31,15 +30,13 @@ interface RouteParams {
 
 interface Props {
   language: 'eng' | 'deu' | 'spa';
+  langKey: any;
 }
 
 const normalizeName = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-const Language: React.FC<Props> = ({ language }) => {
-  const { langKey } = useParams();
-  console.log(langKey);
-  const navigate = useNavigate();
+const Language: React.FC<Props> = ({ language, langKey }) => {
   const locale: 'eng' | 'deu' | 'spa' = 'eng';
 
   if (!langKey) {
@@ -51,6 +48,8 @@ const Language: React.FC<Props> = ({ language }) => {
   }
   const key = normalizeName(langKey.toLowerCase()); 
   const data = localeData[locale][key];
+  console.log(`key is ${key}`)
+  console.log(`data is ${data}`)
   if (!data) {
     return (
       <Container className="languageContainer">

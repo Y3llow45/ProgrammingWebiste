@@ -5,10 +5,14 @@ import { useState } from 'react';
 import Header from './components/Header/Header';
 import Language from './components/Language/Language';
 
-const LanguagePage: React.FC = () => {
+interface LanguagePageProps {
+  language: 'eng' | 'deu' | 'spa';
+}
+
+const LanguagePage: React.FC<LanguagePageProps> = ({language}) => {
   const { langKey } = useParams<{ langKey: string }>();
   if (!langKey) return <Navigate to="/" />;
-  return <Language lang={langKey} />;
+  return <Language language={language} langKey={langKey} />;
 };
 
 function App() {

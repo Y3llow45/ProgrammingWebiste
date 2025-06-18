@@ -18,9 +18,7 @@
 }
 
 .langPageLogo {
-  max-width: 100px;
-  max-height: 100px;
-  object-fit: contain;
+  width: 6rem;
 }
 
 .textWrapper {
