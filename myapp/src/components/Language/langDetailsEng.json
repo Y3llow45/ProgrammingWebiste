@@ -1,6 +1,6 @@
 {
     "csharp": {
-        "shortDescription": "Primary .NET language used for Windows apps and game development.",
+        "shortDescription": "Primary .NET language used for Windows apps and game development",
         "longDescription": [
             "C# is a modern, object-oriented language developed by Microsoft, widely used in enterprise backends, desktop applications, and via Unity in game development.",
             "It features strong typing, garbage collection, LINQ, async/await, and a rich ecosystem."
@@ -15,18 +15,18 @@
         ]
     },
     "javascript": {
-        "shortDescription": "High-level, interpreted language mainly for web development.",
+        "shortDescription": "High-level, interpreted language mainly for web development",
         "longDescription": [
             "JavaScript is the lingua franca of the web, powering interactive pages in browsers and with Node.js on servers.",
             "It supports event-driven, functional, and imperative styles, and has vast ecosystems (React, Vue, Angular, Express, etc.)."
         ],
         "youtubeUrl": "https://www.youtube.com/watch?v=JS_VIDEO_ID",
         "learnWith": [
-            "React",
-            "Node.js",
-            "TypeScript",
-            "Webpack / Vite",
-            "Express"
+            "React  -  used on the frontend (front end is what the client sees)",
+            "Node.js  -  used on the backend (back end is what the server does)",
+            "TypeScript  -  super-set of JavaScript with static typing",
+            "Webpack / Vite  -  project bundlers",
+            "Express.js  -  web framework for Node.js (backend)"
         ]
     }
 }

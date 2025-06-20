@@ -85,7 +85,7 @@ const Language: React.FC<Props> = ({ language, langKey }) => {
       </Box>
 
       <Box className="learnWithSection">
-        <Typography variant="h6">Learn With</Typography>
+        <Typography variant="h6">Learn With: </Typography>
         <List dense>
           {data.learnWith.map((item, idx) => (
             <ListItem key={idx} disableGutters>

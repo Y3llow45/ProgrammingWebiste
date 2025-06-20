@@ -38,6 +38,11 @@
 }
 
 /* Learn With list */
+
+h6 {
+    text-align: left;
+}
+
 .learnWithSection {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
