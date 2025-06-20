@@ -62,7 +62,11 @@ const HomePage: React.FC<Props> = ({ language }) => {
                             <img src={lang.logoUrl} alt={`${lang.name} logo`} className="logoImg" />
                         </div>
                         <CardContent>
-                            <Typography variant="h6" className="desc-text">{lang.name}</Typography>
+                            {lang.name === 'CSharp' ? (
+                                <Typography variant="h6" className="desc-text">C#</Typography>
+                            ) : (
+                                <Typography variant="h6" className="desc-text">{lang.name}</Typography>
+                            )}
                             <Typography variant="subtitle2" color="textSecondary" className="desc-text">
                               {lang.released}
                             </Typography>

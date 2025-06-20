@@ -1,5 +1,5 @@
 {
-    "c#": {
+    "csharp": {
         "shortDescription": "Primary .NET language used for Windows apps and game development.",
         "longDescription": [
             "C# is a modern, object-oriented language developed by Microsoft, widely used in enterprise backends, desktop applications, and via Unity in game development.",
