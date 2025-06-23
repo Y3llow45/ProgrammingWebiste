@@ -4,7 +4,6 @@
   margin: 0 auto;
 }
 
-/* Header: logo left, text right */
 .headerBox {
   display: flex;
   align-items: center;
@@ -23,7 +22,7 @@
 
 .textWrapper {
   flex: 1 1 auto;
-  min-width: 0; /* allow truncation/wrapping if needed */
+  min-width: 0;
 }
 
 .langTitle {
@@ -36,8 +35,6 @@
   text-align: left;
   font-style: italic;
 }
-
-/* Learn With list */
 
 h6 {
     text-align: left;
@@ -52,18 +49,16 @@ h6 {
   padding-left: 0;
 }
 
-/* Long description paragraphs */
 .longDesc {
   margin-bottom: 2rem;
 }
 
-/* Button wrapper */
 .buttonWrapper {
-  text-align: left; /* align button to left */
+  text-align: left;
   margin-bottom: 2rem;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .headerBox {
     flex-direction: column;
@@ -72,4 +67,8 @@ h6 {
   .logoWrapper {
     margin-bottom: 1rem;
   }
+}
+
+ListItemText {
+    font-size: 1rem !important;
 }

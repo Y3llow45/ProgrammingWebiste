@@ -17,10 +17,10 @@
     "javascript": {
         "shortDescription": "High-level, interpreted language mainly for web development",
         "longDescription": [
-            "JavaScript is the lingua franca of the web, powering interactive pages in browsers and with Node.js on servers.",
-            "It supports event-driven, functional, and imperative styles, and has vast ecosystems (React, Vue, Angular, Express, etc.)."
+            "JavaScript is relatively easy to learn and you should learn it if you want to become front end or full stack developer.",
+            "Just learning JS isn't enough to build a web app. Visit job profiles page to see what else you need to learn."
         ],
-        "youtubeUrl": "https://www.youtube.com/watch?v=JS_VIDEO_ID",
+        "youtubeUrl": "https://www.youtube.com/watch?v=DHjqpvDnNGE&ab_channel=Fireship",
         "learnWith": [
             "React  -  used on the frontend (front end is what the client sees)",
             "Node.js  -  used on the backend (back end is what the server does)",

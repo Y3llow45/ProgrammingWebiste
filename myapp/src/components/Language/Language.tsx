@@ -1,5 +1,6 @@
 import { Typography, Container, Box, Button, List, ListItem, ListItemText } from '@mui/material';
 import './Language.css';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 import engLanguageJson from '../HomePage/eng.json';
 import langDetailsEng from './langDetailsEng.json';
@@ -68,54 +69,67 @@ const Language: React.FC<Props> = ({ language, langKey }) => {
 
   return (
     <Container className="languageContainer">
-      <Box className="headerBox">
-        {logoUrl && (
-          <Box className="logoWrapper">
-            <img src={logoUrl} alt={`${langKey} logo`} className="langPageLogo" />
-          </Box>
-        )}
-        <Box className="textWrapper">
-          <Typography variant="h4" className="langTitle">
-            {langKey.charAt(0).toUpperCase() + langKey.slice(1)}
-          </Typography>
-          <Typography variant="subtitle1" className="shortDesc">
-            {data.shortDescription}
-          </Typography>
+        <Box className="headerBox">
+            {logoUrl && (
+                <Box className="logoWrapper">
+                    <img src={logoUrl} alt={`${langKey} logo`} className="langPageLogo" />
+                </Box>
+          )}
+            <Box className="textWrapper">
+                <Typography variant="h4" className="langTitle">
+                    {langKey.charAt(0).toUpperCase() + langKey.slice(1)}
+                </Typography>
+                <Typography variant="subtitle1" className="shortDesc">
+                    {data.shortDescription}
+                </Typography>
+            </Box>
         </Box>
-      </Box>
 
-      <Box className="learnWithSection">
-        <Typography variant="h6">Learn With: </Typography>
-        <List dense>
-          {data.learnWith.map((item, idx) => (
-            <ListItem key={idx} disableGutters>
-              <ListItemText primary={item} />
-            </ListItem>
-          ))}
-        </List>
-      </Box>
-
-      <Box className="longDesc">
-        {data.longDescription.map((para, idx) => (
-          <Typography key={idx} variant="body1" paragraph>
-            {para}
-          </Typography>
-        ))}
-      </Box>
-
-      {data.youtubeUrl && (
-        <Box className="buttonWrapper">
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => {
-              window.open(data.youtubeUrl, '_blank');
-            }}
-          >
-            Watch on YouTube
-          </Button>
+        <Box className="learnWithSection">
+            <Typography variant="h6">Learn With: </Typography>
+            <List dense>
+                {data.learnWith.map((item, idx) => (
+                    <ListItem key={idx} disableGutters>
+                        <ListItemText primary={item} primaryTypographyProps={{fontSize: '1rem'}} />
+                    </ListItem>
+                ))}
+            </List>
         </Box>
-      )}
+
+        <Box className="longDesc">
+            {data.longDescription.map((para, idx) => (
+                <Typography key={idx} variant="body1" paragraph>
+                    {para}
+                </Typography>
+            ))}
+        </Box>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', gap: '16px' }}>
+            {data.youtubeUrl && (
+                <Button
+                    variant="contained"
+                    onClick={() => window.open(data.youtubeUrl, '_blank')}
+                    sx={{
+                        backgroundColor: '#FF0000',
+                        color: '#fff',
+                        '&:hover': { backgroundColor: '#cc0000' },
+                        textTransform: 'none',
+                        fontWeight: 'bold',
+                        gap: '6px',
+                    }}
+                    startIcon={<YouTubeIcon />}
+                >
+                Watch short intro
+                </Button>
+            )}
+            <Button
+                variant="contained"
+                color="primary"
+                onClick={() => window.location.href = '/languages/javascript'}
+                sx={{ textTransform: 'none', fontWeight: 'bold' }}
+            >
+                Job profiles
+            </Button>
+        </div>
     </Container>
   );
 };
