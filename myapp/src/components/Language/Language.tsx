@@ -11,6 +11,7 @@ interface LanguageDetail {
   shortDescription: string;
   longDescription: string[];
   youtubeUrl: string;
+  youtubeUrlCourse: string;
   learnWith: string[];
 }
 
@@ -49,8 +50,6 @@ const Language: React.FC<Props> = ({ language, langKey }) => {
   }
   const key = normalizeName(langKey.toLowerCase()); 
   const data = localeData[locale][key];
-  console.log(`key is ${key}`)
-  console.log(`data is ${data}`)
   if (!data) {
     return (
       <Container className="languageContainer">
@@ -93,6 +92,24 @@ const Language: React.FC<Props> = ({ language, langKey }) => {
                         <ListItemText primary={item} primaryTypographyProps={{fontSize: '1rem'}} />
                     </ListItem>
                 ))}
+                <ListItem disableGutters>
+                  <ListItemText
+                    primary={
+                      <>
+                        <span style={{ color: '#000' }}>Want to learn these? Visit </span>
+                        <a
+                          href="https://roadmap.sh"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: '#1976d2', textDecoration: 'underline', fontWeight: '500' }}
+                        >
+                          roadmap.sh
+                        </a>
+                      </>
+                    }
+                    primaryTypographyProps={{ fontSize: '1rem' }}
+                  />
+                </ListItem>
             </List>
         </Box>
 
@@ -119,6 +136,23 @@ const Language: React.FC<Props> = ({ language, langKey }) => {
                     startIcon={<YouTubeIcon />}
                 >
                 Watch short intro
+                </Button>
+            )}
+            {data.youtubeUrlCourse && (
+                <Button
+                    variant="contained"
+                    onClick={() => window.open(data.youtubeUrlCourse, '_blank')}
+                    sx={{
+                        backgroundColor: '#FF0000',
+                        color: '#fff',
+                        '&:hover': { backgroundColor: '#cc0000' },
+                        textTransform: 'none',
+                        fontWeight: 'bold',
+                        gap: '6px',
+                    }}
+                    startIcon={<YouTubeIcon />}
+                >
+                Watch awesome course
                 </Button>
             )}
             <Button

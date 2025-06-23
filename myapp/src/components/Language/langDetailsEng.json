@@ -6,6 +6,7 @@
             "It features strong typing, garbage collection, LINQ, async/await, and a rich ecosystem."
         ],
         "youtubeUrl": "https://www.youtube.com/watch?v=VIDEO_ID",
+        "youtubeUrlCourse": "https://www.youtube.com/watch?v=Ihy0QziLDf0&list=PLZPZq0r_RZOO1zkgO4bIdfuLpizCeHYKv&ab_channel=BroCode",
         "learnWith": [
             "ASP.NET Core",
             "Entity Framework",
@@ -21,6 +22,7 @@
             "Just learning JS isn't enough to build a web app. Visit job profiles page to see what else you need to learn."
         ],
         "youtubeUrl": "https://www.youtube.com/watch?v=DHjqpvDnNGE&ab_channel=Fireship",
+        "youtubeUrlCourse": "https://www.youtube.com/watch?v=Ihy0QziLDf0&list=PLZPZq0r_RZOO1zkgO4bIdfuLpizCeHYKv&ab_channel=BroCode",
         "learnWith": [
             "React  -  used on the frontend (front end is what the client sees)",
             "Node.js  -  used on the backend (back end is what the server does)",
