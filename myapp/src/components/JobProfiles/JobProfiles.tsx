@@ -20,6 +20,23 @@ const profiles = [
     ],
   },
   {
+    title: 'Front-end Developer',
+    cardImage: '/images/frontend.jpg',
+    techs: [
+        { name: 'React', icon: '/react.svg' },
+        { name: 'Angular', icon: '/angular.svg' },
+        { name: 'Vue', icon: '/vue.svg' },
+        { name: 'JavaScript', icon: '/js.svg' },
+        { name: 'TypeScript', icon: '/ts.svg' },
+        { name: 'HTML', icon: '/html.svg' },
+        { name: 'CSS', icon: '/css.svg' },
+        { name: 'Git', icon: '/git.svg' },
+        { name: 'Tailwind CSS', icon: '/tailwindcss.svg' },
+        { name: 'Figma', icon: '/figma.svg' },
+        { name: 'Photoshop', icon: '/photoshop.svg' },
+    ],
+  },
+  {
     title: 'Backend Java Developer',
     cardImage: '/images/backend.jpg',
     techs: [
@@ -67,9 +84,9 @@ const profiles = [
 
 export default function JobProfilesPage() {
   return (
-    <div className="cardGrid">
+    <div className="cardGridJP">
       {profiles.map((p) => (
-        <div className="cardItem" key={p.title}>
+        <div className="cardItemJP" key={p.title}>
           <Card>
             <CardMedia
               component="img"
