@@ -4,7 +4,7 @@ import { Card, CardMedia, CardContent, Typography, List, ListItem, ListItemAvata
 const profiles = [
   {
     title: 'ReactJS Developer',
-    cardImage: '/images/frontend.jpg',
+    cardImage: '/frontend.jpg',
     techs: [
         { name: 'React', icon: '/react.svg' },
         { name: 'NextJS', icon: '/nextjs.svg' },
@@ -21,7 +21,7 @@ const profiles = [
   },
   {
     title: 'Front-end Developer',
-    cardImage: '/images/frontend.jpg',
+    cardImage: '/frontend.jpg',
     techs: [
         { name: 'React', icon: '/react.svg' },
         { name: 'Angular', icon: '/angular.svg' },
@@ -38,29 +38,30 @@ const profiles = [
   },
   {
     title: 'Backend Java Developer',
-    cardImage: '/images/backend.jpg',
+    cardImage: '/backend.jpg',
     techs: [
-      { name: 'Java', icon: '/icons/java.png' },
-      { name: 'Spring Boot', icon: '/icons/spring.png' },
-      { name: 'SQL', icon: '/icons/sql.png' },
-      { name: 'Docker', icon: '/icons/docker.png' },
-      { name: 'Git', icon: '/icons/git.png' },
+      { name: 'Java', icon: '/java.svg' },
+      { name: 'Spring Boot', icon: '/spring.svg' },
+      { name: 'PostgreSQL', icon: '/postgresql.svg' },
+      { name: 'Docker', icon: '/docker.svg' },
+      { name: 'Azure/AWS or GCP', icon: '/azure.svg' },
+      { name: 'Git', icon: '/git.svg' },
     ],
   },
   {
     title: 'Full Stack Developer',
-    cardImage: '/images/fullstack.jpg',
+    cardImage: '/fullstack.jpg',
     techs: [
-      { name: 'React', icon: '/icons/react.png' },
-      { name: 'Node.js', icon: '/icons/nodejs.png' },
-      { name: 'Express', icon: '/icons/express.png' },
-      { name: 'MongoDB', icon: '/icons/mongodb.png' },
-      { name: 'Docker', icon: '/icons/docker.png' },
+      { name: 'React', icon: 'react.png' },
+      { name: 'Node.js', icon: 'nodejs.png' },
+      { name: 'Express', icon: 'express.png' },
+      { name: 'MongoDB', icon: 'mongodb.png' },
+      { name: 'Docker', icon: 'docker.png' },
     ],
   },
   {
     title: 'DevOps Engineer',
-    cardImage: '/images/devops.jpg',
+    cardImage: '/devops.jpg',
     techs: [
       { name: 'Docker', icon: '/icons/docker.png' },
       { name: 'Kubernetes', icon: '/icons/kubernetes.png' },
@@ -71,7 +72,7 @@ const profiles = [
   },
   {
     title: 'Cybersecurity Specialist',
-    cardImage: '/images/cyber.jpg',
+    cardImage: '/cyber.jpg',
     techs: [
       { name: 'Wireshark', icon: '/icons/wireshark.png' },
       { name: 'Metasploit', icon: '/icons/metasploit.png' },
