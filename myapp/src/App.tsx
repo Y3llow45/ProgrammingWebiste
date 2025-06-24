@@ -4,6 +4,7 @@ import HomePage from './components/HomePage/HomePage';
 import { useState } from 'react';
 import Header from './components/Header/Header';
 import Language from './components/Language/Language';
+import JobProfilesPage from './components/JobProfiles/JobProfiles';
 
 interface LanguagePageProps {
   language: 'eng' | 'deu' | 'spa';
@@ -22,6 +23,7 @@ function App() {
             <Header language={language} setLanguage={setLanguage} />
             <Routes>
                 <Route path="/" element={<HomePage language={language} />} />
+                <Route path="/jobProfiles" element={<JobProfilesPage />} />
                 <Route path="/languages/:langKey" element={<LanguagePage language={language} />} />
             </Routes>
         </div>
