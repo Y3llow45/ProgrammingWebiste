@@ -10,3 +10,8 @@
   flex: 1 1 300px;
   max-width: 300px;
 }
+
+.cardImageJP {
+    margin: auto;
+    width: auto !important;
+}

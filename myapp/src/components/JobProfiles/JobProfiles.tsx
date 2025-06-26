@@ -42,14 +42,31 @@ const profiles = [
     techs: [
       { name: 'Java', icon: '/java.svg' },
       { name: 'Spring Boot', icon: '/spring.svg' },
-      { name: 'PostgreSQL', icon: '/postgresql.svg' },
+      { name: 'Hibernate', icon: '/hibernate.svg' },
+      { name: 'PostgreSQL/MongoDB or Redis', icon: '/postgresql.svg' },
+      { name: 'Apache kafka or RabbitMQ', icon: '/kafka.svg' },
       { name: 'Docker', icon: '/docker.svg' },
       { name: 'Azure/AWS or GCP', icon: '/azure.svg' },
       { name: 'Git', icon: '/git.svg' },
     ],
   },
   {
-    title: 'Full Stack Developer',
+    title: 'Full stack Java Developer',
+    cardImage: '/fullstack.jpg',
+    techs: [
+      { name: 'Java or Kotlin', icon: '/java.svg' },
+      { name: 'Spring Boot', icon: '/spring.svg' },
+      { name: 'TypeScript', icon: '/ts.svg' },
+      { name: 'React or Angular', icon: '/react.svg' },
+      { name: 'Hibernate', icon: '/hibernate.svg' },
+      { name: 'PostgreSQL/MongoDB or Redis', icon: '/postgresql.svg' },
+      { name: 'Apache kafka or RabbitMQ', icon: '/kafka.svg' },
+      { name: 'Azure/AWS or GCP', icon: '/azure.svg' },
+      { name: 'Git', icon: '/git.svg' },
+    ],
+  },
+  {
+    title: 'Site Reliability Engineer',
     cardImage: '/fullstack.jpg',
     techs: [
       { name: 'React', icon: 'react.png' },
@@ -94,6 +111,7 @@ export default function JobProfilesPage() {
               height="140"
               image={p.cardImage}
               alt={p.title}
+              className='cardImageJP'
             />
             <CardContent>
               <Typography variant="h6" gutterBottom>
