@@ -37,6 +37,22 @@ const profiles = [
     ],
   },
   {
+    title: 'Wordpres Developer',
+    cardImage: '/frontend.jpg',
+    techs: [
+        { name: 'Wordpress', icon: '/wordpress.svg' },
+        { name: 'Php', icon: '/php.svg' },
+        { name: 'JavaScript', icon: '/js.svg' },
+        { name: 'jQuery', icon: '/vue.svg' },
+        { name: 'HTML', icon: '/html.svg' },
+        { name: 'CSS', icon: '/css.svg' },
+        { name: 'Git', icon: '/git.svg' },
+        { name: 'Docker', icon: '/tailwindcss.svg' },
+        { name: 'Figma', icon: '/figma.svg' },
+
+    ],
+  },
+  {
     title: 'Backend Java Developer',
     cardImage: '/backend.jpg',
     techs: [
@@ -67,12 +83,12 @@ const profiles = [
   },
   {
     title: 'Site Reliability Engineer',
-    cardImage: '/fullstack.jpg',
+    cardImage: '/sre.png',
     techs: [
-      { name: 'React', icon: 'react.png' },
-      { name: 'Node.js', icon: 'nodejs.png' },
-      { name: 'Express', icon: 'express.png' },
-      { name: 'MongoDB', icon: 'mongodb.png' },
+      { name: 'Jenkins', icon: '/jenkins.svg' },
+      { name: 'Terraform', icon: '/terraform.svg' },
+      { name: 'Java', icon: '/java.svg' },
+      { name: 'k8', icon: '/k8.svg' },
       { name: 'Docker', icon: 'docker.png' },
     ],
   },

@@ -158,7 +158,7 @@ const Language: React.FC<Props> = ({ language, langKey }) => {
             <Button
                 variant="contained"
                 color="primary"
-                onClick={() => window.location.href = '/languages/javascript'}
+                onClick={() => window.location.href = '/jobProfiles'}
                 sx={{ textTransform: 'none', fontWeight: 'bold' }}
             >
                 Job profiles
